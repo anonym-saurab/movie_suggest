@@ -1,0 +1,58 @@
+{% load static %}
+
+<!-- movies/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Suggester</title>
+    <link rel="stylesheet" href="{% static 'home_0000.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn btn-signin">Get Help ?</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="movie-mood">
+            <b>MovieMood</b>
+        </div>
+        <div class="hero-content">
+            <h1>Forgot a movie name.</h1>
+            <h1>Get Movies suggested according to the name you remember.</h1>
+            <h2>Anything in Mood. Anywhere you Watch.</h2>
+            <p>Ready to get suggested? Enter what's in your mood below</p>
+            <form action="{% url 'search' %}" method="get" class="email-form">
+                <input type="text" name="mood" placeholder="Enter What's in Your Mood (e.g.: sad, romantic, action,.....)" required>
+                <button type="submit" class="btn btn-get-started">Search Movies</button>
+            </form>            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Questions? Call 000-000-000-000</p>
+            <div class="footer-links">
+                <a href="#">FAQ</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{% static 'search_movies.css' %}">
+</head>
+<body>
+    <header class="nav-bar">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="results">
+        <h1>Search results for {% for mood in moods %}{{ mood }}{% if not forloop.last %}, {% endif %}{% endfor %}</h1>
+        {% if movies %}
+            <ul>
+                {% for movie in movies %}
+                    <li>
+                        <p>{{ movie.Title }}</p>
+                        <p>{{ movie.Year }}</p>
+                        <a href="https://www.imdb.com/title/{{ movie.imdbID }}/" target="_blank">View on IMDb</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No movies found.</p>
+        {% endif %}
+    </section>
+</body>
+</html>
