@@ -1,5 +1,9 @@
 _Have you forgot the name of a movie ?_ _Only remember a little about the movie name ?_
-_A website that can suggest you movies according to the amount of name you remember is_
+**MovieMood** _a website that can suggest you movies according to the name you remember_
 
+## Website Link
+Click ![MovieMood](https://saurab54.pythonanywhere.com/)
 
-**MovieMood**
+## Screenshots
+![Alt text](image1.png)
+![Alt text](image2.png)
