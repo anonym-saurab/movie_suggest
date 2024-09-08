@@ -5,5 +5,4 @@ _Have you forgot the name of a movie ?_ _Only remember a little about the movie 
 Click [MovieMood](https://saurab54.pythonanywhere.com/)
 
 ## Screenshots
-![Alt text](image1.png)
-![Alt text](image2.png)
+![Alt text](website_screenshot.png)
